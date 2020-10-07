@@ -8,8 +8,18 @@ const bodyEl = document.querySelector("body");
 
 swichToggle.addEventListener("change", onSwich);
 
+bodyEl.setAttribute("class", localStorage.getItem("Theme"));
+
+function checkToggle(e) {
+  if (localStorage.getItem("Theme") === Theme.DARK) {
+    return (e.target.checked = true);
+  }
+}
+
+console.log(localStorage.getItem("Theme"));
+console.log(Theme.DARK);
+
 function onSwich(e) {
-  console.log("cT", e.currentTarget.checked);
   console.log("t", e.target.checked);
 
   if (e.target.checked === true) {
@@ -20,4 +30,6 @@ function onSwich(e) {
     bodyEl.classList.add(Theme.LIGHT);
     bodyEl.classList.remove(Theme.DARK);
   }
+
+  localStorage.setItem("Theme", bodyEl.getAttribute("class"));
 }

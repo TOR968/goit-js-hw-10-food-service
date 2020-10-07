@@ -7,6 +7,5 @@ const cardsMarkup = createMenuMarkup(menu);
 menuContainer.insertAdjacentHTML("beforeend", cardsMarkup);
 
 function createMenuMarkup(menu) {
-  //   return menu.map(cards).join("");
   return cards(menu);
 }

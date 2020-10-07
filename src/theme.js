@@ -10,18 +10,11 @@ swichToggle.addEventListener("change", onSwich);
 
 bodyEl.setAttribute("class", localStorage.getItem("Theme"));
 
-function checkToggle(e) {
-  if (localStorage.getItem("Theme") === Theme.DARK) {
-    return (e.target.checked = true);
-  }
+if (localStorage.getItem("Theme") === Theme.DARK) {
+  swichToggle.checked = true;
 }
 
-console.log(localStorage.getItem("Theme"));
-console.log(Theme.DARK);
-
 function onSwich(e) {
-  console.log("t", e.target.checked);
-
   if (e.target.checked === true) {
     bodyEl.classList.add(Theme.DARK);
     bodyEl.classList.remove(Theme.LIGHT);

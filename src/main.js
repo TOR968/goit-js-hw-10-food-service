@@ -9,3 +9,5 @@ menuContainer.insertAdjacentHTML("beforeend", cardsMarkup);
 function createMenuMarkup(menu) {
   return cards(menu);
 }
+
+import "./theme";
